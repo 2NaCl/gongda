@@ -1,0 +1,26 @@
+server:
+  port: 16012
+  tomcat:
+    remote-ip-header: x-forwarded-for
+    protocol-header: x-forwarded-proto
+    port-header: X-Forwarded-Port
+spring:
+  application:
+    name: ihrm
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/lms?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 1
+  #3.JPA
+  jpa:
+    database: MySQL
+    show-sql: true
+    open-in-view: true
+  redis:
+    host: 1
+    port: 6379
+jwt:
+  config:
+    key: saas-ihrm
+    ttl: 3600000
